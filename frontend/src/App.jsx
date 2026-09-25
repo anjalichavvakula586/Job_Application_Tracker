@@ -11,6 +11,7 @@ import { getToken, clearToken, isLoggedIn } from "./utils/auth";
 import "./App.css";
 import "./components/JobDetailsModal.css";
 import Analysis from "./pages/Analysis";
+const API_URL = import.meta.env.VITE_API_URL;
 const defaultFilters = { search: "", status: "All", jobType: "All" };
 
 function parseSalary(salary) {
@@ -40,7 +41,7 @@ function App() {
     const token = getToken();
     if (!token) return;
 
-    fetch("http://localhost:5000/api/jobs", {
+    fetch(`${API_URL}/api/jobs`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((response) => {
@@ -78,7 +79,7 @@ function App() {
     if (editingJob) {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/jobs/${editingJob._id}`,
+          `${API_URL}/api/jobs/${editingJob._id}`,
           {
             method: "PUT",
             headers: {
@@ -108,7 +109,7 @@ function App() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/jobs", {
+      const response = await fetch(`${API_URL}/api/jobs`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -140,7 +141,7 @@ function App() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/jobs/${job._id}`,
+        `${API_URL}/api/jobs/${job._id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },
@@ -161,7 +162,7 @@ function App() {
     const token = getToken();
 
     try {
-      const response = await fetch(`http://localhost:5000/api/jobs/${jobId}`, {
+      const response = await fetch(`${API_URL}/api/jobs/${jobId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
