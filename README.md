@@ -413,7 +413,7 @@ http://localhost:5173
 
 ### 🔐 Login
 
-![Login](screenshots/login.png)
+![Login](screenshots/loginpage.png)
 
 ### 📊 Dashboard
 
