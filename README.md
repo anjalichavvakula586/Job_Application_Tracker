@@ -472,6 +472,9 @@ Possible improvements for future versions include:
 * Calendar integration
 
 ---
+sample credentials to login:
+email:anjalichavvakula50@gmail.com
+password:123456789
 
 # 👩‍💻 Author
 
