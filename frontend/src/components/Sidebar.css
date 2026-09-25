@@ -1,0 +1,127 @@
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  background-color: #1a1a2e;
+  color: #cfcfe8;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  flex-shrink: 0;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 20px 20px 20px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+}
+
+.logo-icon {
+  color: #6c63ff;
+}
+
+.sidebar-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-item,
+.nav-subitem {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  border-left: 3px solid transparent;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.nav-item:hover,
+.nav-subitem:hover {
+  background-color: #262640;
+  color: #fff;
+}
+
+.nav-item.active {
+  color: #ffffff;
+  background-color: #262640;
+  border-left: 3px solid #6c63ff;
+  font-weight: 600;
+}
+
+.nav-subitem {
+  padding-left: 36px;
+  color: #a0a0c0;
+}
+
+.nav-subitem.active {
+  color: #ffffff;
+  background-color: #262640;
+  border-left: 3px solid #6c63ff;
+}
+
+.sidebar-footer {
+  border-top: 1px solid #33334d;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.sidebar-footer .nav-item {
+  color: #ff8080;
+}
+
+.sidebar-footer .nav-item:hover {
+  background-color: #3a2020;
+  color: #ffb3b3;
+}
+
+/* Responsive: horizontal top-bar on small screens */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sidebar-logo {
+    padding: 0;
+    margin-right: auto;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    flex: none;
+  }
+
+  .nav-item,
+  .nav-subitem {
+    padding: 6px 10px;
+    font-size: 13px;
+    border-left: none;
+    border-bottom: 2px solid transparent;
+  }
+
+  .nav-item.active {
+    border-left: none;
+    border-bottom: 2px solid #6c63ff;
+  }
+
+  .sidebar-footer {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+}

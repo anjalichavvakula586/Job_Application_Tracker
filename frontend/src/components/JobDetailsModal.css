@@ -1,0 +1,48 @@
+.job-details-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.job-details-modal {
+  background: #fff;
+  width: 450px;
+  max-width: 90%;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.job-details-modal h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1a1a2e;
+}
+
+.job-detail {
+  margin: 12px 0;
+  color: #555;
+}
+
+.job-detail strong {
+  color: #222;
+}
+
+.job-details-close {
+  margin-top: 20px;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.job-details-close:hover {
+  opacity: 0.9;
+}
